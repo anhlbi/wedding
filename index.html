@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>모바일 청첩장</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOO & OOO의 결혼식</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>안흘비 ♥ 김민지</h1>
-  <p>결혼합니다.</p>
+
+    <div class="container">
+        
+        <header id="main">
+            <div class="title-area">
+                <p class="date">2024. 05. 25. SAT PM 12:00</p>
+                <h1>김철수 <span class="divider">&</span> 이영희</h1>
+                <p class="venue">서울 강남구 OO웨딩홀 1층</p>
+            </div>
+            <div class="main-photo">
+                <img src="./images/main.jpg" alt="메인 웨딩 사진"> 
+            </div>
+            <div class="greeting">
+                <h2>초대합니다</h2>
+                <p>
+                    평생을 같이하고 싶은 사람을 만났습니다.<br>
+                    서로 아껴주고 이해하며<br>
+                    사랑 베풀며 살겠습니다.<br>
+                    저희 약속 위에 따뜻한 격려로<br>
+                    축복해 주셔서 감사합니다.
+                </p>
+            </div>
+        </header>
+
+        <hr class="section-divider">
+
+        <section id="gallery">
+            <div class="section-title">GALLERY</div>
+            <div class="photo-grid">
+                <img src="./images/photo1.jpg" alt="사진1">
+                <img src="./images/photo2.jpg" alt="사진2">
+                <img src="./images/photo3.jpg" alt="사진3">
+                <img src="./images/photo4.jpg" alt="사진4">
+                <img src="./images/photo5.jpg" alt="사진5">
+                <img src="./images/photo6.jpg" alt="사진6">
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="location">
+            <div class="section-title">LOCATION</div>
+            <p class="venue-name">OO 웨딩홀</p>
+            <p class="venue-address">서울 강남구 테헤란로 123</p>
+            
+            <div class="map-image">
+                <img src="./images/map_sketch.jpg" alt="약도 이미지">
+            </div>
+
+            <div class="navi-buttons">
+                <button onclick="openNavi('tmap')">티맵</button>
+                <button onclick="openNavi('kakao')">카카오내비</button>
+                <button onclick="openNavi('naver')">네이버지도</button>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="account">
+            <div class="section-title">ACCOUNT</div>
+            <div class="account-box">
+                <p class="label">신랑측 마음 전하실 곳</p>
+                <div class="account-row">
+                    <span>국민 000-00-0000-000 (김철수)</span>
+                    <button class="copy-btn" onclick="copyToClipboard('111-11-11111-111')">복사</button>
+                </div>
+            </div>
+            <div class="account-box">
+                <p class="label">신부측 마음 전하실 곳</p>
+                <div class="account-row">
+                    <span>신한 000-000-000000 (이영희)</span>
+                    <button class="copy-btn" onclick="copyToClipboard('222-22-22222-222')">복사</button>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="guestbook">
+            <div class="section-title">GUESTBOOK</div>
+            <p class="guestbook-desc">축하의 메시지를 남겨주세요.</p>
+            
+            <div class="guestbook-btn-area">
+                <a href="https://forms.google.com/your-form-url" target="_blank" class="write-btn">
+                    방명록 작성하기 (Google Form)
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>Share the moment</p>
+        </footer>
+
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
