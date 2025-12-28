@@ -179,32 +179,117 @@ header {
     line-height: 1.5;
 }
 
-/* 4. 마음 전하실 곳 */
-.account-box {
-    background-color: #fafafa;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 15px;
+/* 아코디언 버튼 스타일 */
+.accordion {
+    background-color: white;
+    color: #555;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
     text-align: left;
+    border: 1px solid #eee;
+    outline: none;
+    transition: 0.4s;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
-.account-box .label {
-    font-size: 12px;
-    color: #888;
-    margin-bottom: 8px;
+
+/* 활성화 되었을 때 스타일 */
+.active, .accordion:hover {
+    background-color: #fcfcfc;
 }
+
+/* 화살표 아이콘 */
+.accordion:after {
+    content: '\002B'; /* 플러스(+) 기호 */
+    font-size: 20px;
+    color: #777;
+    float: right;
+}
+
+.active:after {
+    content: "\2212"; /* 마이너스(-) 기호 */
+}
+
+/* 숨겨진 패널 (계좌 정보) */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+/* 계좌 정보 한 줄(행) 스타일 */
 .account-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.account-row:last-child {
+    border-bottom: none;
+}
+
+/* 텍스트 정보 */
+.info-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.name {
+    font-weight: bold;
+    color: #5d7586; /* 신랑측 기본 색상 (네이비 톤) */
     font-size: 14px;
 }
+
+/* 신부측 이름 색상 (분홍/붉은 톤) */
+.bride-name {
+    color: #d67d7d;
+}
+
+.account-num {
+    font-size: 14px;
+    color: #333;
+}
+
+.bank-name {
+    font-size: 13px;
+    color: #888;
+}
+
+/* 복사 버튼 */
 .copy-btn {
-    background-color: #eee;
-    border: none;
-    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px 12px;
     font-size: 12px;
-    border-radius: 4px;
+    color: #666;
     cursor: pointer;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+
+.copy-btn:active {
+    transform: scale(0.95);
 }
 
 /* 5. 방명록 */
