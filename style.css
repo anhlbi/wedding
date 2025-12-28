@@ -397,7 +397,7 @@ footer {
 
 /* --- 방명록 (Guestbook) 스타일 --- */
 #guestbook {
-    background-color: #fafafa; /* 배경색을 아주 연한 회색으로 */
+    /* background-color: #fafafa; /* 배경색을 아주 연한 회색으로 */ */
     padding: 50px 20px;
 }
 
