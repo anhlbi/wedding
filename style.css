@@ -194,3 +194,71 @@ footer {
     font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
     font-style: normal;
 }
+
+/* 전체 컨테이너 설정 */
+.dday-wrapper {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    /* font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; /* 기본 폰트 */ */
+    color: #555;
+}
+
+/* 1. 상단 날짜 (2026. 03. 07...) */
+.wedding-date-text {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* 2. 타이머 라벨 (DAYS HOUR MIN SEC) */
+.timer-labels {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* 라벨 간격 */
+    font-size: 10px;
+    color: #aaa;
+    margin-bottom: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.timer-labels span {
+    width: 40px; /* 라벨의 폭을 고정하여 정렬 유지 */
+    text-align: center;
+}
+
+/* 3. 타이머 숫자 영역 (0 : -5 : ...) */
+.timer-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-family: 'Times New Roman', Times, serif; /* 이미지와 같은 명조체 */ */
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700; /* 숫자가 굵기 */
+}
+
+.num-box {
+    width: 65px; /* 숫자 영역 폭 고정 (정렬을 위해) */
+    text-align: center;
+}
+
+.colon {
+    font-size: 24px;
+    color: #ccc;
+    margin-top: -5px; /* 콜론 높이 미세 조정 */
+}
+
+/* 4. 하단 문구 (누구의 결혼식이...) */
+.dday-message {
+    font-size: 16px;
+    color: #666;
+}
+
+.dday-highlight {
+    color: #e08b8b; /* 포인트 컬러 (살구색/핑크) */
+    font-weight: bold;
+}
