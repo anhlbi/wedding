@@ -66,27 +66,38 @@
         <hr class="section-divider">
 
         <section class="dday-wrapper">
+            <h2 class="section-title">D-DAY</h2>
+            
             <div class="wedding-date-text">
                 2026. 03. 07. 토요일 오후 1시
             </div>
     
-            <div class="timer-labels">
-                <span>DAYS</span>
-                <span style="width:10px"></span> <span>HOUR</span>
-                <span style="width:10px"></span>
-                <span>MIN</span>
-                <span style="width:10px"></span>
-                <span>SEC</span>
-            </div>
+            <div class="timer-container">
+                <div class="timer-item">
+                    <div class="label">DAYS</div>
+                    <div class="num-box" id="count-days">0</div>
+                </div>
+                
+                <div class="colon">:</div>
     
-            <div class="timer-numbers">
-                <span class="num-box" id="count-days">0</span>
-                <span class="colon">:</span>
-                <span class="num-box" id="count-hours">00</span>
-                <span class="colon">:</span>
-                <span class="num-box" id="count-min">00</span>
-                <span class="colon">:</span>
-                <span class="num-box" id="count-sec">00</span>
+                <div class="timer-item">
+                    <div class="label">HOUR</div>
+                    <div class="num-box" id="count-hours">00</div>
+                </div>
+    
+                <div class="colon">:</div>
+    
+                <div class="timer-item">
+                    <div class="label">MIN</div>
+                    <div class="num-box" id="count-min">00</div>
+                </div>
+    
+                <div class="colon">:</div>
+    
+                <div class="timer-item">
+                    <div class="label">SEC</div>
+                    <div class="num-box" id="count-sec">00</div>
+                </div>
             </div>
     
             <div class="dday-message">
