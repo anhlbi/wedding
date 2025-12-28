@@ -73,16 +73,16 @@ function updateNewCountdown() {
         secStr = "-" + String(seconds).padStart(2, "0");
 
         // 하단 문구 변경: "지났습니다"
-        messageBox.innerHTML = `흘비와 민지의 결혼식이 <span class="dday-highlight">${days}일</span> 지났습니다.`;
+        messageBox.innerHTML = `🤵흘비와 👰민지의 결혼식이 <span class="dday-highlight">${days}일</span> 지났습니다.`;
         
     } else {
         // [CASE 2] 날짜가 남았을 때 (D-Day)
         
         // 하단 문구 변경: "남았습니다"
         if (days === 0) {
-             messageBox.innerHTML = `흘비와 민지의 결혼식이 <span class="dday-highlight">오늘</span> 입니다.`;
+             messageBox.innerHTML = `🤵흘비와 👰민지의 결혼식이 <span class="dday-highlight">오늘</span> 입니다.`;
         } else {
-             messageBox.innerHTML = `흘비와 민지의 결혼식이 <span class="dday-highlight">${days}일</span> 남았습니다.`;
+             messageBox.innerHTML = `🤵흘비와 👰민지의 결혼식이 <span class="dday-highlight">${days}일</span> 남았습니다.`;
         }
     }
 
