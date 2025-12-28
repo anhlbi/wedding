@@ -125,7 +125,8 @@ header {
 
 .transport-info {
     margin-top: 40px; /* 버튼과 정보 사이 간격 */
-    text-align: center;
+    text-align: left;
+    padding-left: 10px;
     padding-bottom: 20px;
 }
 .transport-info h3 {
