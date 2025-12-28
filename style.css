@@ -189,16 +189,12 @@ header {
     border-bottom: none !important; /* 혹시 모를 밑줄 강제 제거 */
 }
 
-/* 아코디언 버튼 */
+/* 마음 전하기 (아코디언) */
 .accordion {
     background-color: #fff;
     color: #555;
     cursor: pointer;
     padding: 15px 20px;
-    width: calc(100% - 40px); 
-    max-width: 400px; /* 최대 폭은 400px로 제한 */
-    margin: 0 auto 10px auto; /* 중앙 정렬 */
-    text-align: left;
     border: 1px solid #ddd;
     outline: none;
     font-size: 15px;
@@ -208,6 +204,21 @@ header {
     align-items: center;
     border-radius: 8px;
     box-sizing: border-box;
+
+    /* [모바일 기본 설정] */
+    /* 방명록의 padding: 20px과 똑같은 여백을 강제로 만듦 */
+    width: auto; 
+    margin: 0 20px 10px 20px; 
+    max-width: 400px; /* 혹시 모를 늘어짐 방지 */
+}
+
+/* [PC/태블릿 설정] 화면이 440px보다 넓을 때 */
+@media (min-width: 440px) {
+    .accordion {
+        width: 100%;
+        /* PC에서는 양옆 여백을 없애고 중앙 정렬(auto)로 변경 */
+        margin: 0 auto 10px auto; 
+    }
 }
 
 .accordion:hover, .active {
@@ -225,7 +236,7 @@ header {
     content: "\2212";
 }
 
-/* 패널 (내용 박스) */
+/* 패널 (내용 박스) - 버튼과 동일한 규칙 적용 */
 .panel {
     padding: 0 15px;
     background-color: white;
@@ -233,11 +244,21 @@ header {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     border-radius: 8px;
-    width: calc(100% - 40px); 
-    max-width: 400px;
-    margin: 0 auto 10px auto;
     box-sizing: border-box;
     border: none;
+
+    /* [모바일 기본] */
+    width: auto;
+    margin: 0 20px 10px 20px;
+    max-width: 400px;
+}
+
+/* [PC/태블릿 설정] */
+@media (min-width: 440px) {
+    .panel {
+        width: 100%;
+        margin: 0 auto 10px auto;
+    }
 }
 
 /* 한 줄(Row) 스타일 */
