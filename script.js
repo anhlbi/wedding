@@ -32,8 +32,8 @@ function openNavi(type) {
             break;
 
         case 'naver':
-            // 네이버지도: 모바일 웹 길찾기 페이지로 이동
-            location.href = `https://m.map.naver.com/route.nhn?menu=route&ename=${name}&ex=${lng}&ey=${lat}&pathType=0&showMap=true`;
+            // 네이버지도: 모바일 장소 검색 결과 화면으로 이동
+            location.href = `https://m.map.naver.com/search2/search.naver?query=${encodeURIComponent(name)}&sm=hty&style=v5`;
             break;
     }
 }
