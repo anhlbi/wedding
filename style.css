@@ -130,13 +130,13 @@ header {
     padding-bottom: 20px;
 }
 .transport-info h3 {
-    font-size: 15px;
-    color: #89a; /* 포인트 컬러 (원하는 색으로 변경 가능) */
+    font-size: 12px;
+    color: #555; /* 포인트 컬러 (원하는 색으로 변경 가능) */
     margin-bottom: 8px;
     font-weight: 700;
 }
 .transport-info p {
-    font-size: 14px;
+    font-size: 11px;
     color: #555;
     line-height: 1.5;
 }
