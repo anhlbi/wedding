@@ -10,6 +10,30 @@ function copyToClipboard(text) {
     });
 }
 
+
+// 지도 띄우기 코드
+var mapContainer = document.getElementById('map'); // 지도를 표시할 div
+var mapOption = { 
+    center: new kakao.maps.LatLng(35.148498, 126.8378945), // 라붐 웨딩홀 좌표
+    level: 3 // 지도의 확대 레벨 (숫자가 작을수록 확대됨)
+};
+
+// 지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+// 3. 마커(핀) 표시하기
+var markerPosition  = new kakao.maps.LatLng(35.148498, 126.8378945); 
+
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+
+marker.setMap(map); // 지도 위에 마커를 올립니다
+
+// (선택사항) 지도 확대 축소 막기 (모바일에서 스크롤 방해 방지)
+// map.setZoomable(false); 
+
+
 // 내비게이션 앱 연결 기능
 function openNavi(type) {
     // 라붐 웨딩홀 (광주) 좌표
