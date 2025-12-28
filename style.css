@@ -216,7 +216,7 @@ footer {
 .timer-labels {
     display: flex;
     justify-content: center;
-    gap: 25px; /* 라벨 간격 */
+    gap: 20px; /* 라벨 간격 */
     font-size: 10px;
     color: #aaa;
     margin-bottom: 5px;
@@ -242,23 +242,23 @@ footer {
 }
 
 .num-box {
-    width: 80px; /* 숫자 영역 폭 고정 (정렬을 위해) */
+    width: 60px; /* 숫자 영역 폭 고정 (정렬을 위해) */
     text-align: center;
 }
 
 .colon {
-    font-size: 24px;
+    font-size: 20px;
     color: #ccc;
     margin-top: -5px; /* 콜론 높이 미세 조정 */
 }
 
 /* 4. 하단 문구 (누구의 결혼식이...) */
 .dday-message {
-    font-size: 16px;
+    font-size: 14px;
     color: #666;
 }
 
 .dday-highlight {
-    color: #e08b8b; /* 포인트 컬러 (살구색/핑크) */
+    color: #666; /* 포인트 컬러 (살구색/핑크) */
     font-weight: bold;
 }
