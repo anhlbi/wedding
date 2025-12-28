@@ -175,4 +175,30 @@ function fallbackCopy(text) {
 }
 
 
+// 구글 시트로 보내는 기능
+    const form = document.getElementById('gform');
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw69CoRSpuaQOOBimqHSbcHRNqgGgX0wAj8ky86hll5K5GDuvyYClF-ker8yeGyUngklw/exec"; 
 
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        
+        // 버튼 비활성화 (중복 클릭 방지)
+        const btn = form.querySelector('.write-btn-submit');
+        const originalText = btn.innerText;
+        btn.disabled = true;
+        btn.innerText = "전송 중...";
+
+        fetch(SCRIPT_URL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            alert("소중한 메시지가 전달되었습니다! 감사합니다. 🙇‍♂️🙇‍♀️");
+            form.reset(); // 입력창 비우기
+        })
+        .catch(error => {
+            console.error('Error!', error.message);
+            alert("전송에 실패했습니다. 잠시 후 다시 시도해주세요.");
+        })
+        .finally(() => {
+            btn.disabled = false;
+            btn.innerText = originalText;
+        });
+    });
