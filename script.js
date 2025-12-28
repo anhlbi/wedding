@@ -33,7 +33,7 @@ function openNavi(type) {
 
         case 'naver':
             // 네이버지도: 모바일 웹 길찾기 페이지로 이동
-            location.href = `https://m.map.naver.com/nav/index.nhn?ename=${name}&elat=${lat}&elng=${lng}&pathType=0&showMap=true`;
+            location.href = `https://m.map.naver.com/route.nhn?menu=route&ename=${name}&ex=${lng}&ey=${lat}&pathType=0&showMap=true`;
             break;
     }
 }
