@@ -120,3 +120,59 @@ function updateNewCountdown() {
 // 1초마다 실행
 setInterval(updateNewCountdown, 1000);
 updateNewCountdown(); // 로딩 즉시 실행
+
+
+// 1. 아코디언 기능 (펼치기/접기)
+const acc = document.getElementsByClassName("accordion");
+
+for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        // 클릭된 버튼에 active 클래스 토글 (화살표 모양 변경용)
+        this.classList.toggle("active");
+
+        // 바로 다음에 있는 요소(panel)을 찾음
+        const panel = this.nextElementSibling;
+
+        // 패널이 열려있으면 닫고, 닫혀있으면 엶
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            // scrollHeight는 숨겨진 내용의 전체 높이
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+    });
+}
+
+// 2. 클립보드 복사 기능
+function copyToClipboard(text) {
+    // 최신 브라우저 (Navigator API) 사용
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('계좌번호가 복사되었습니다.\n' + text);
+        }).catch(err => {
+            console.error('복사 실패:', err);
+            fallbackCopy(text);
+        });
+    } else {
+        // 구형 브라우저 대응
+        fallbackCopy(text);
+    }
+}
+
+// 구형 브라우저를 위한 복사 기능 (Fallback)
+function fallbackCopy(text) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+        document.execCommand('copy');
+        alert('계좌번호가 복사되었습니다.\n' + text);
+    } catch (err) {
+        alert('복사에 실패했습니다. 번호를 직접 입력해주세요.');
+    }
+    document.body.removeChild(textArea);
+}
+
+
+
