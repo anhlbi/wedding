@@ -206,16 +206,20 @@ form.addEventListener('submit', e => {
 
 // 1. 마우스 오른쪽 클릭 방지 (전체 화면)
 document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    // alert("사진은 눈으로만 봐주세요! ^^"); // 필요하면 경고창 주석을 해제하세요
+    if (e.target.classList.contains('prevent-save') || e.target.tagName === 'IMG') {
+        e.preventDefault();
+        // alert("사진은 눈으로만 봐주세요! ^^"); // 필요하면 경고창 주석을 해제하세요
+    }
 });
 
 // 2. 이미지 드래그 시작 방지
 document.addEventListener('dragstart', function(e) {
-    e.preventDefault();
+    if (e.target.classList.contains('prevent-save') || e.target.tagName === 'IMG') {
+        e.preventDefault();
+    }
 });
 
 // 3. 선택 방지 (복사 방지)
-document.addEventListener('selectstart', function(e) {
-    e.preventDefault();
-});
+// document.addEventListener('selectstart', function(e) {
+//     e.preventDefault();
+// });
