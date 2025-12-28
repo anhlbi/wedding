@@ -169,3 +169,9 @@ footer {
     color: #aaa;
     background-color: #fafafa;
 }
+
+/* 하트 이모지 빨간색 강제 적용 */
+.divider {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+    font-style: normal;
+}
