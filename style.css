@@ -204,21 +204,9 @@ header {
     align-items: center;
     border-radius: 8px;
     box-sizing: border-box;
-
-    /* [모바일 기본 설정] */
-    /* 방명록의 padding: 20px과 똑같은 여백을 강제로 만듦 */
-    width: auto; 
-    margin: 0 20px 10px 20px; 
-    max-width: 400px; /* 혹시 모를 늘어짐 방지 */
-}
-
-/* [PC/태블릿 설정] 화면이 440px보다 넓을 때 */
-@media (min-width: 440px) {
-    .accordion {
-        width: 100%;
-        /* PC에서는 양옆 여백을 없애고 중앙 정렬(auto)로 변경 */
-        margin: 0 auto 10px auto; 
-    }
+    width: calc(100% - 40px); 
+    max-width: 400px; 
+    margin: 0 auto 10px auto; 
 }
 
 .accordion:hover, .active {
@@ -248,17 +236,9 @@ header {
     border: none;
 
     /* [모바일 기본] */
-    width: auto;
-    margin: 0 20px 10px 20px;
+    width: calc(100% - 40px);
     max-width: 400px;
-}
-
-/* [PC/태블릿 설정] */
-@media (min-width: 440px) {
-    .panel {
-        width: 100%;
-        margin: 0 auto 10px auto;
-    }
+    margin: 0 auto 10px auto;
 }
 
 /* 한 줄(Row) 스타일 */
