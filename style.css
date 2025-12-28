@@ -179,91 +179,107 @@ header {
     line-height: 1.5;
 }
 
-/* 아코디언 버튼 스타일 */
+/* 제목 스타일 (밑줄 제거됨) */
+.section-title {
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px; /* 간격 조정 */
+    text-align: center; /* 제목은 가운데 정렬 */
+    border-bottom: none !important; /* 혹시 모를 밑줄 강제 제거 */
+}
+
+/* 아코디언 버튼 */
 .accordion {
-    background-color: white;
+    background-color: #fff;
     color: #555;
     cursor: pointer;
-    padding: 18px;
+    padding: 15px 20px;
     width: 100%;
-    text-align: left;
-    border: 1px solid #eee;
+    text-align: left; /* 버튼 글씨 왼쪽 정렬 */
+    border: 1px solid #ddd;
     outline: none;
-    transition: 0.4s;
-    font-size: 16px;
+    font-size: 15px;
+    transition: 0.3s;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
-/* 활성화 되었을 때 스타일 */
-.active, .accordion:hover {
+.accordion:hover, .active {
     background-color: #fcfcfc;
+    border-color: #ccc;
 }
 
-/* 화살표 아이콘 */
 .accordion:after {
-    content: '\002B'; /* 플러스(+) 기호 */
-    font-size: 20px;
-    color: #777;
-    float: right;
+    content: '\002B';
+    font-size: 18px;
+    color: #999;
 }
 
 .active:after {
-    content: "\2212"; /* 마이너스(-) 기호 */
+    content: "\2212";
 }
 
-/* 숨겨진 패널 (계좌 정보) */
+/* 패널 (내용 박스) */
 .panel {
-    padding: 0 18px;
+    padding: 0 15px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    border-left: 1px solid #eee;
-    border-right: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    margin-top: -5px;
+    transition: max-height 0.3s ease-out;
     margin-bottom: 10px;
-    border-radius: 0 0 5px 5px;
+    border-radius: 8px;
+    width: 98%; /* 좌우 여백 살짝 줌 */
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    border: none; /* 패널 테두리 제거 (깔끔하게) */
 }
 
-/* 계좌 정보 한 줄(행) 스타일 */
+/* 한 줄(Row) 스타일 */
 .account-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
+    align-items: center; /* 세로 중앙 정렬 */
+    padding: 15px 5px;
     border-bottom: 1px solid #f0f0f0;
+    text-align: left; /* 내부 텍스트 강제 왼쪽 정렬 */
 }
 
 .account-row:last-child {
     border-bottom: none;
 }
 
-/* 텍스트 정보 */
+/* 텍스트 정보 그룹 (이름, 번호, 은행) */
 .info-group {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    align-items: flex-start;
+    text-align: left;
+    gap: 5px; /* 줄 간격 */
 }
 
+/* 폰트 스타일 */
 .name {
     font-weight: bold;
-    color: #5d7586; /* 신랑측 기본 색상 (네이비 톤) */
+    color: #5d7586; /* 신랑측 색상 (네이비) */
     font-size: 14px;
 }
 
-/* 신부측 이름 색상 (분홍/붉은 톤) */
 .bride-name {
-    color: #d67d7d;
+    font-weight: bold;
+    color: #d67d7d; /* 신부측 색상 (분홍) */
+    font-size: 14px;
 }
 
 .account-num {
-    font-size: 14px;
+    font-size: 15px;
     color: #333;
+    font-weight: 500;
 }
 
 .bank-name {
@@ -273,23 +289,20 @@ header {
 
 /* 복사 버튼 */
 .copy-btn {
-    background-color: white;
+    background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 3px;
-    padding: 5px 12px;
+    border-radius: 4px;
+    padding: 6px 12px;
     font-size: 12px;
     color: #666;
     cursor: pointer;
-    transition: all 0.2s;
+    white-space: nowrap;
+    margin-left: 10px; /* 텍스트와 버튼 사이 간격 */
 }
 
 .copy-btn:hover {
-    background-color: #f0f0f0;
-    border-color: #ccc;
-}
-
-.copy-btn:active {
-    transform: scale(0.95);
+    background-color: #f9f9f9;
+    border-color: #bbb;
 }
 
 /* 5. 방명록 */
