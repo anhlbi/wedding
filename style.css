@@ -225,7 +225,7 @@ footer {
 }
 
 .timer-labels span {
-    width: 40px; /* 라벨의 폭을 고정하여 정렬 유지 */
+    width: 60px; /* 라벨의 폭을 고정하여 정렬 유지 */
     text-align: center;
 }
 
@@ -242,7 +242,7 @@ footer {
 }
 
 .num-box {
-    width: 65px; /* 숫자 영역 폭 고정 (정렬을 위해) */
+    width: 80px; /* 숫자 영역 폭 고정 (정렬을 위해) */
     text-align: center;
 }
 
