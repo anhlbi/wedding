@@ -452,3 +452,21 @@ footer {
     margin-top: 10px;
 }
 
+/* 불펌 방지 */
+.prevent-save {
+    /* 1. 드래그 방지 (PC) */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    
+    /* 2. 텍스트/이미지 선택 방지 (블록 지정 안 되게) */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    /* 3. 모바일 터치 메뉴 방지 (아이폰 필수) */
+    -webkit-touch-callout: none;
+}
