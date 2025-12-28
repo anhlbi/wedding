@@ -33,7 +33,7 @@ function openNavi(type) {
 
         case 'naver':
             // 네이버지도: 모바일 장소 검색 결과 화면으로 이동
-            location.href = `https://m.map.naver.com/search2/search.naver?query=${encodeURIComponent(name)}&sm=hty&style=v5`;
+            location.href = "https://m.place.naver.com/place/31320030/location?filter=location&selected_place_id=31320030";
             break;
     }
 }
