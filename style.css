@@ -108,6 +108,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin-top: 20px; /* 지도와 버튼 사이 간격 */
 }
 .navi-buttons button {
     background-color: #fff;
@@ -120,6 +121,23 @@ header {
 }
 .navi-buttons button:hover {
     background-color: #f0f0f0;
+}
+
+.transport-info {
+    margin-top: 40px; /* 버튼과 정보 사이 간격 */
+    text-align: center;
+    padding-bottom: 20px;
+}
+.transport-info h3 {
+    font-size: 15px;
+    color: #89a; /* 포인트 컬러 (원하는 색으로 변경 가능) */
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+.transport-info p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
 }
 
 /* 4. 마음 전하실 곳 */
