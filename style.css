@@ -212,52 +212,57 @@ footer {
     letter-spacing: 0.5px;
 }
 
-/* 2. 타이머 라벨 (DAYS HOUR MIN SEC) */
-.timer-labels {
+/* 타이머 전체를 감싸는 박스 (Flexbox) */
+.timer-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* 라벨 간격 */
+    align-items: flex-end; /* 바닥 기준 정렬로 숫자와 콜론 높이 맞춤 */
+    gap: 5px; /* 그룹 간격 좁힘 */
+    margin-bottom: 30px;
+}
+
+/* 개별 시간 그룹 (라벨 + 숫자) */
+.timer-item {
+    display: flex;
+    flex-direction: column; /* 위아래로 배치 */
+    align-items: center;
+    width: 60px; /* 너비를 고정하여 간격 일정하게 유지 */
+}
+
+/* 라벨 (DAYS, HOUR...) */
+.label {
     font-size: 10px;
-    color: #aaa;
-    margin-bottom: 5px;
-    font-weight: bold;
+    color: #aaa; /* 연한 회색 */
+    margin-bottom: 10px; /* 숫자와의 간격 */
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
-.timer-labels span {
-    width: 60px; /* 라벨의 폭을 고정하여 정렬 유지 */
-    text-align: center;
-}
-
-/* 3. 타이머 숫자 영역 (0 : -5 : ...) */
-.timer-numbers {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* font-family: 'Times New Roman', Times, serif; /* 이미지와 같은 명조체 */ */
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 30px;
-    font-weight: 700; /* 숫자가 굵기 */
-}
-
+/* 숫자 (00) */
 .num-box {
-    width: 60px; /* 숫자 영역 폭 고정 (정렬을 위해) */
+    font-size: 30px; /* 숫자 크기 */
+    font-weight: 700;
+    color: #333;
+    width: 100%; /* 부모(.timer-item) 너비에 맞춤 */
     text-align: center;
+    line-height: 1; /* 줄 간격 좁힘 */
 }
 
+/* 콜론 (:) */
 .colon {
-    font-size: 20px;
+    font-size: 16px; /* 크기 대폭 축소 (기존 24px -> 16px) */
     color: #ccc;
-    margin-top: -5px; /* 콜론 높이 미세 조정 */
+    font-weight: 300;
+    padding-bottom: 5px; /* 숫자와 시각적 높이 맞춤 */
+    margin: 0 2px; /* 좌우 여백 */
 }
 
-/* 4. 하단 문구 (누구의 결혼식이...) */
+/* 하단 문구 */
 .dday-message {
-    font-size: 14px;
+    font-size: 15px;
     color: #666;
+    margin-top: 10px;
 }
-
 .dday-highlight {
     color: #666; /* 포인트 컬러 (살구색/핑크) */
     font-weight: bold;
