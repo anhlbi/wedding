@@ -115,18 +115,61 @@ header {
     margin: 0 20px;
 }
 
-/* 2. 갤러리 (2열 그리드) */
+/* 1. 사진을 감싸는 모든 상자들의 공통 규칙 */
+/* main-photo, greeting-photo, 그리고 그리드 안의 photo-item 모두 해당 */
+.main-photo, 
+.greeting-photo, 
+.photo-item {
+    position: relative; /* 투명막의 기준점 역할 */
+    display: block;
+    width: 100%;
+    overflow: hidden; /* 이미지가 둥근 모서리일 경우 튀어나감 방지 */
+}
+
+/* 2. 갤러리 (3열 그리드) */
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
-.photo-grid img {
+/* .photo-grid img { */
+/*    width: 100%; */
+/*    height: 150px; /* 높이 고정 (필요시 수정) */ */
+/*    object-fit: cover; */
+/*    border-radius: 4px; */
+/* } */
+
+/* 기존 이미지 스타일을 'photo-item' 상자로 옮깁니다 */
+.photo-item {
+    position: relative;  /* 투명막 기준점*/
     width: 100%;
-    height: 150px; /* 높이 고정 (필요시 수정) */
-    object-fit: cover;
-    border-radius: 4px;
+    height: 150px;       /* 높이 고정 */
+    
+    border-radius: 4px;  /* 둥근 모서리 */
+    overflow: hidden;    /* 투명막이 둥근 모서리 밖으로 튀어 나가지 않게 자름 */
 }
+
+/* 이미지는 상자에 꽉 차게만 설정 */
+.photo-item img {
+    width: 100%;
+    height: 100%;        /* 부모(photo-item) 높이에 맞춤 */
+    object-fit: cover;   /* 비율 유지하며 꽉 채움 */
+    display: block;      /* 이미지 하단 여백 제거 */
+}
+
+/* 투명 보호막 */
+.prevent-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
 
 /* 3. 오시는 길 */
 .venue-name {
