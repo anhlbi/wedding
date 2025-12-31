@@ -146,7 +146,9 @@ header {
     height: 150px;       /* 높이 고정 */
     
     border-radius: 4px;  /* 둥근 모서리 */
-    overflow: hidden;    /* 투명막이 둥근 모서리 밖으로 튀어 나가지 않게 자름 */
+    /* overflow: hidden;    /* 투명막이 둥근 모서리 밖으로 튀어 나가지 않게 자름 */ */
+    /* 모바일 버그 방지용 (매직 코드) */
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 /* 이미지는 상자에 꽉 차게만 설정 */
@@ -155,6 +157,7 @@ header {
     height: 100%;        /* 부모(photo-item) 높이에 맞춤 */
     object-fit: cover;   /* 비율 유지하며 꽉 채움 */
     display: block;      /* 이미지 하단 여백 제거 */
+    border-radius: 4px;
 }
 
 /* 투명 보호막 */
@@ -168,6 +171,7 @@ header {
     background-color: transparent;
     -webkit-touch-callout: none;
     user-select: none;
+    border-radius: 4px;
 }
 
 
